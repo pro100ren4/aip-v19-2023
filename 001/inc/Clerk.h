@@ -15,5 +15,5 @@ public:
     Clerk();
     ~Clerk();
     
-    std::string GetName(ulong key);
+    std::string GetName(unsigned long key);
 };

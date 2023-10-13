@@ -30,7 +30,7 @@ Clerk::~Clerk()
     std::cout << "destructor" << std::endl;
 }
 
-std::string Clerk::GetName(ulong key)
+std::string Clerk::GetName(unsigned long key)
 {
     return experience >= key ? name : "";
 }

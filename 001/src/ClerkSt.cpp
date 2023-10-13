@@ -32,7 +32,8 @@ Clerk ClreateClerk()
     newClerk.name[0] = '\0';
     newClerk.job[0] = '\0';
     newClerk.group[0] = '\0';
-    newClerk.salary = 0;   
+    newClerk.salary = 0; 
+    return newClerk;  
 }
 
 Clerk InputClerk()

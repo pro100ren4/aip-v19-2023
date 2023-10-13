@@ -17,6 +17,7 @@ int main(int argc, char const *argv[])
     } 
 
     char action;
+    int keyExp = 0;
 
     bool isRunnig = true;
     while (isRunnig)
@@ -24,22 +25,17 @@ int main(int argc, char const *argv[])
         system("clear");
         std::cout << "==MENU==\n";
         std::cout << "1 - Print clerks with specific work exp\n";
-        std::cout << "2 - Hello\n";
-        std::cout << "3 - Exit\n";
+        std::cout << "2 - Exit\n";
         std::cout << "\nEnter action: ";
         std::cin >> action;
         switch (action)
         {
             case '1':
-                //int keyExp = 0;
                 std::cout << "Enter the specific expirience: ";
-                //std::cin >> keyExp;
-                PrintClerksWithSpecificExp(clerks, clerkNumber, 1);
+                std::cin >> keyExp;
+                PrintClerksWithSpecificExp(clerks, clerkNumber, keyExp);
                 break;
             case '2':
-                std::cout << "Hello!\n";
-                break;
-            case '3':
                 delete[] clerks; 
                 isRunnig = false;
                 break;
@@ -64,6 +60,6 @@ void PrintClerksWithSpecificExp(Clerk clerks[], int clerksSize, int keyExp)
         if(clerkName)
             std::cout << clerkName << std::endl;
         else
-            std::cout << "This clerk din't have enough exp";
+            std::cout << "This clerk din't have enough exp\n";
     }   
 }
